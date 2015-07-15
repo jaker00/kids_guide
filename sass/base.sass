@@ -1,0 +1,200 @@
+nav li
+  display: inline-block
+  font-size: 18px
+  font-family: "Segoe"
+  padding: 0px
+
+#logo
+  background: #FFE11A
+
+nav
+  ul
+    // width: 100%
+    position: absolute
+    top: 0px
+    left: 0px
+    font-size: 0
+    
+  li a
+    text-decoration: none
+    display: block
+    // padding: 15px 10px
+    color: black
+
+.container
+  margin-top: 0px
+  padding: 10px 10px 50px 10px
+  font-family: "Helvetica"
+  font-weight: lighter
+  position: relative
+  transition-duration: 1s
+  // http://jsfiddle.net/44zc3pyy/2/
+
+h1
+  text-align: center
+  padding: 80px 0px
+  font-size: 48px
+
+h2
+  text-align: center
+  padding-bottom: 50px
+  font-size: 40px
+
+h3
+  color: #FFF
+  padding: 60px 0px
+  font-size: 30px
+  text-align: center
+  font-family: "Helvetica"
+
+nav li:hover
+  background: white
+  color: black
+
+p
+  font-weight: lighter
+  margin-bottom: 20px
+
+.places
+  background: #1695A3
+
+
+.container a:hover
+  color: red
+
+img
+  width: 20%
+  float: right
+
+/* Nav Bar Stuff */
+
+.clearfix:after
+  display: block
+  clear: both
+
+header
+  font-family: 'Tangerine', serif
+  transition-duration: 1s
+  background: #FD7400
+  height: 39px
+
+
+// http://jsfiddle.net/j96bu778/
+
+.menu
+  display: block
+  width: 100%
+  margin: 0px auto
+  li
+    margin: 0px
+    list-style: none
+    font-family: 'Ek Mukta'
+    display: block
+  a
+    /*transition:all linear 0.15s; */
+  li:hover > a, .current-item > a
+    text-decoration: none
+    color: black
+  > ul >
+    li
+      float: left
+      display: inline-block
+      position: relative
+      font-size: 19px
+      > a
+        padding: 10px 20px
+        display: inline-block
+      &:hover > a
+        background: white
+    .current-item > a
+      background: white
+  li:hover .sub-menu
+    display: block
+
+.sub-menu
+  width: 160%
+  padding: 0px
+  position: absolute
+  z-index: 1
+  top: 100%
+  left: 0px
+  display: none
+  transition: opacity linear 0.15s
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2)
+  li
+    display: block
+    font-size: 16px
+    a
+      padding: 10px 30px
+      display: block
+      &:hover
+        background: #DDD
+  .current-item a
+    background: #DDD
+
+.split-list
+  ul
+    float: left
+    margin-left: 1em
+  li
+    padding-right: 2em
+    // line-height: 1.5em
+    // font-size: 12px
+
+#menu-toggle
+  display: none
+
+.box
+  background: #1F8A70
+  height: 100%
+  
+.colorado
+  padding: 0px 50px
+
+@media only screen and (max-width: 620px)
+  #menu-toggle
+    display: block
+    padding: 14px
+    position: absolute
+    top: 0px
+    left: 0px
+    transition-duration: 1s
+
+  .rotate
+    transition-duration: 1s
+    transform: rotate(90deg)
+  
+  .menu li
+    clear: left
+    display: block
+    width: 100%
+
+  .menu ul
+    height: 200px
+
+  .menu li:hover span
+    // transition-duration: 1s
+    display: inline-block
+    transform: rotate(-90deg)
+
+  .menu
+    position: relative
+    left: -136.828px
+    top: 0
+    transition-duration: 1s
+    
+  .sub-menu
+    left: 136.828px
+    top: 0px
+    z-index: 1
+    background: white
+
+  
+
+  .slide
+    transition-duration: 1s
+    margin-left: 136.828px
+    
+  .menu-slide
+    left: 0
+    transition-duration: 1s
