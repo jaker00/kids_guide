@@ -1,18 +1,38 @@
 $(document).ready(function(){
+    
 
     $("#box").keyup(function(){
         var bla = $('#box').val().length;
         var el = document.getElementById("text");
             if (bla > 5) {
-                $("#bar").removeClass("red");
-                $("#bar").addClass("green");
+                $("#box").removeClass("red");
+                
                 el.textContent = "great";
             }
             else {
-                $("#bar").removeClass("green")
-                $("#bar").addClass("red");
-                el.textContent = "inadequate";
-                
+                if (bla == 0) {
+                    $("#box").removeClass("red");   
+                }
+                else {
+                    $("#box").addClass("red");
+                    el.textContent = "Password must contain at least 6 characters";
+                    }
             }
+    });
+    
+    $("#box").focusout(function() {
+        console.log("hi");
+        var bla = $('#box').val().length;
+        var el = document.getElementById("text");
+            if (bla < 6) {
+                $("#box").addClass("redoutline");
+            }
+            else {
+                $("#box").removeClass("redoutline");
+            }
+    });
+    
+    $("#box").focus(function() {
+        $("#box").removeClass("redoutline");
     });
 });
